@@ -57,7 +57,8 @@ def turtle_to_coords():
 def find_indy_time():
     # payload = {'lat': -86.1581, 'lon': 39.7684}
     payload = {'lat': 50, 'lon': 50}
-    r = requests.get('http://api.open-notify.org/iss-pass.json', params=payload)
+    r = requests.get('http://api.open-notify.org/iss-pass.json',
+                     params=payload)
     print time.ctime(r.json()['request']['datetime'])
 
 
